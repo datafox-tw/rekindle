@@ -1,0 +1,19 @@
+# 修法白名單：agent 只能改這裡列出的 Spark 設定。
+# min / max 在階段 1 依節點規格填入。有上下限欄位但還是 null 的設定，一律拒絕。
+
+# 記憶體與資源
+spark.executor.memory: {type: bytes, min: null, max: null}
+spark.executor.memoryOverhead: {type: bytes, min: null, max: null}
+spark.executor.cores: {type: int, min: null, max: null}
+spark.executor.instances: {type: int, min: null, max: null}
+spark.driver.memory: {type: bytes, min: null, max: null}
+
+# Shuffle 與 AQE
+spark.sql.shuffle.partitions: {type: int, min: null, max: null}
+spark.sql.adaptive.enabled: {type: bool}
+spark.sql.adaptive.skewJoin.enabled: {type: bool}
+spark.sql.autoBroadcastJoinThreshold: {type: bytes, min: null, max: null}
+
+# 節點回收
+spark.decommission.enabled: {type: bool}
+spark.storage.decommission.shuffleBlocks.enabled: {type: bool}

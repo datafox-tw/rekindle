@@ -1,0 +1,17 @@
+.env
+
+.DS_Store
+
+# Python
+__pycache__/
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Frontend
+node_modules/
+dist/
+
+# Terraform
+.terraform/
+*.tfstate*

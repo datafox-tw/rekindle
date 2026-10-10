@@ -1,0 +1,12 @@
+# 複製這個資料夾成 faults/<fault-id>/ 再填內容。
+id: example-fault
+title: ""
+root_cause: executor_container_oom # 必須是 backend/app/agent/schemas.py 裡 RootCause 的其中一個
+trigger: failed # failed | timeout | slow
+signal_layers: [k8s] # k8s | log | event_log
+how_it_breaks: "" # 怎麼做出來的、為什麼會壞
+fix:
+  conf: {} # Spark 設定 → 修好的值，必須在白名單內
+  rationale: ""
+verify:
+  max_duration_ratio: null # 修復後耗時 ÷ 基準耗時的上限

@@ -1,0 +1,27 @@
+[project]
+name = "rekindle-backend"
+version = "0.1.0"
+description = "Rekindle: Spark on K8s failure triage and auto-recovery"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.143.0",
+    "langgraph>=1.2.14",
+    "pgvector>=0.5.1",
+    "pydantic-settings>=2.15.0",
+    "sqlalchemy>=2.1.4",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+    "ruff>=0.17.0",
+]
